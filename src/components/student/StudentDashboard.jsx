@@ -42,13 +42,13 @@ const StudentDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
 
-      {/* ── Page Header ── */}
+
       <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mb-10">
         <h1 className="text-2xl font-semibold text-slate-900 tracking-tight">Welcome back, {currentUser.name}</h1>
         <p className="text-slate-500 text-sm mt-1">Here's an overview of your assignments.</p>
       </motion.div>
 
-      {/* ── Stats Grid ── */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 lg:mb-16">
         {statCards.map((stat, i) => (
           <motion.div
@@ -79,7 +79,7 @@ const StudentDashboard = () => {
         ))}
       </div>
 
-      {/* ── Filter Tabs ── */}
+
       <div className="flex items-center gap-2 mt-12 mb-10 bg-slate-100 border border-slate-200 rounded-xl p-1.5 w-fit">
         {['all', 'pending', 'submitted'].map(f => (
           <button
@@ -97,7 +97,7 @@ const StudentDashboard = () => {
         ))}
       </div>
 
-      {/* ── Assignment Cards Grid ── */}
+
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <AnimatePresence>
           {filteredAssignments.length > 0 ? (
@@ -121,7 +121,7 @@ const StudentDashboard = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* ── Submission Modal ── */}
+
       <Modal isOpen={submissionModal.open} onClose={() => setSubmissionModal({ open: false, assignment: null, link: '' })} title="Submit Assignment">
         <div className="space-y-5">
           {submissionModal.assignment && (

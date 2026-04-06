@@ -47,7 +47,7 @@ const AdminDashboard = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-8 py-10">
       
-      {/* ── Page Header ── */}
+
       <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-10">
         <div>
           <h1 className="text-2xl font-semibold text-slate-900 tracking-tight">Professor Console</h1>
@@ -58,7 +58,7 @@ const AdminDashboard = () => {
         </button>
       </motion.div>
 
-      {/* ── Stats Grid ── */}
+
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 lg:mb-16">
         {statCards.map((stat, i) => (
           <motion.div 
@@ -91,7 +91,7 @@ const AdminDashboard = () => {
         ))}
       </div>
 
-      {/* ── Filters ── */}
+
       <div className="flex items-center gap-2 mt-12 mb-10 bg-slate-100 border border-slate-200 rounded-xl p-1.5 w-fit">
         {['all', 'inprogress', 'complete', 'nosubmissions'].map(f => (
           <button 
@@ -107,7 +107,7 @@ const AdminDashboard = () => {
         ))}
       </div>
 
-      {/* ── Assignment Cards Grid ── */}
+
        <motion.div layout className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <AnimatePresence>
           {filteredAssignments.map(a => (
@@ -130,7 +130,7 @@ const AdminDashboard = () => {
         </AnimatePresence>
       </motion.div>
 
-      {/* ── Modals ── */}
+
       <Modal isOpen={formModal.open} onClose={() => setFormModal({ open: false, assignment: null })} title={formModal.assignment ? 'Edit Assignment' : 'Create Assignment'} size="lg">
         <AssignmentForm
            assignment={formModal.assignment}
