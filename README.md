@@ -4,9 +4,10 @@ A modern, SaaS-style assignment tracking and review dashboard built for universi
 
 Built with **React**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**, the UI heavily focuses on clean visual hierarchy, generous whitespace, and responsive layouts inspired by leading platforms like Linear and Vercel.
 
+The website can be accessed at : https://student-assignment-dashboard-mocha.vercel.app/
 ---
 
-## 🚀 Environment Setup Instructions
+##  Environment Setup Instructions
 
 ### Prerequisites
 - Node.js (v18+)
@@ -36,7 +37,7 @@ npm run preview
 
 ---
 
-## 🏗 Architecture Overview
+##  Architecture Overview
 
 The system is configured as a pure Client-Side Rendered (CSR) Single Page Application (SPA). To bypass the need for a complex backend service during prototyping, it employs a **Mock Local Storage Database Architecture**:
 
@@ -70,6 +71,6 @@ src/
 
 ---
 
-## 🎨 Component Structure & Design Decisions
+##  Component Structure & Design Decisions
 
 Detailed documentation regarding the application's clean design philosophy, specific component abstractions, and UX decisions can be found in [DESIGN_DECISIONS.md](./DESIGN_DECISIONS.md).
